@@ -1,4 +1,5 @@
 import escapeRegExp from 'lodash/escapeRegExp';
+import matchAll from 'string.prototype.matchall';
 
 export interface SearchTextAtResult {
   begin: number;
@@ -21,7 +22,8 @@ export default function getSearchTextAt(
 
   const TRIGGER_REGEX = new RegExp(`(\\s|^)(${triggerPattern})`, 'g');
 
-  const matches = str.matchAll(TRIGGER_REGEX);
+  // const matches = str.matchAll(TRIGGER_REGEX);
+  const matches = matchAll(str, TRIGGER_REGEX);
 
   let triggerStartIndex = 0;
   let valueStartIndex = 0;

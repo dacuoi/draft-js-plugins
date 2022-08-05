@@ -8,10 +8,13 @@
     "url": "http://www.nikgraf.com"
   },
   "dependencies": {
+    "@types/draft-js": "^0.11.9",
+    "@types/string.prototype.matchall": "^4.0.1",
     "draft-js": "^0.11.0",
     "eslint-plugin-import": "^2.26.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "string.prototype.matchall": "^4.0.7"
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
@@ -46,7 +49,7 @@
     "eslint-plugin-no-only-tests": "^2.6.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "jest": "^27.5.1",
     "linaria": "2.1",
     "lint-staged": "^13.0.3",
@@ -105,9 +108,11 @@
     "test:watch": "yarn test -- --watch",
     "build": "yarn build:dts && yarn workspaces run build",
     "build:dts": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/buttons run build",
+    "build-mention": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/mention run build",
     "prerelease": "yarn build",
     "release": "changeset publish",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "workspaces": [
     "packages/*"
