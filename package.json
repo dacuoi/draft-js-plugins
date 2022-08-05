@@ -94,7 +94,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/draft-js-plugins/draft-js-plugins.git"
+    "url": "https://github.com/dacuoi/draft-js-plugins.git"
   },
   "scripts": {
     "alex": "alex README.md",
@@ -108,13 +108,16 @@
     "test:watch": "yarn test -- --watch",
     "build": "yarn build:dts && yarn workspaces run build",
     "build:dts": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/buttons run build",
-    "build-mention": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/mention run build",
+    "build:mention": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/mention run build",
     "prerelease": "yarn build",
     "release": "changeset publish",
     "postinstall": "husky install",
     "prepare": "husky install"
   },
   "workspaces": [
-    "packages/*"
+    "packages/editor",
+    "packages/utils",
+    "packages/buttons",
+    "packages/mention"
   ]
 }
