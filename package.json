@@ -90,7 +90,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "private":"true",
+  "private": "true",
   "repository": {
     "type": "git",
     "url": "git://github.com/dacuoi/draft-js-plugins.git"
@@ -109,8 +109,7 @@
     "build:dts": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/buttons run build",
     "build:mention": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/mention run build",
     "prerelease": "yarn build",
-    "release": "changeset publish",
-    "prepare": "husky install"
+    "release": "changeset publish"
   },
   "workspaces": [
     "packages/editor",
