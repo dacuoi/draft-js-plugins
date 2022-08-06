@@ -1,11 +1,10 @@
 {
-  "name": "draft-js-plugins",
-  "description": "A Plugin Architecture on top of Draft.JS",
-  "version": "0.0.0",
-  "author": {
-    "name": "Nik Graf",
-    "email": "nik@nikgraf.com",
-    "url": "http://www.nikgraf.com"
+  "name": "@dacuoi/draft-js-plugins-mention",
+  "description": "Mention Plugin Architecture on top of Draft.JS",
+  "version": "1.0.1",
+  "author": "Nos Studio <paintbsd@gmail.com> (https://nos-studio.web.app/)",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dacuoi"
   },
   "dependencies": {
     "@types/draft-js": "^0.11.9",
@@ -91,10 +90,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "private": true,
+  "private":"true",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dacuoi/draft-js-plugins.git"
+    "url": "git://github.com/dacuoi/draft-js-plugins.git"
   },
   "scripts": {
     "alex": "alex README.md",
@@ -111,7 +110,6 @@
     "build:mention": "yarn workspace @draft-js-plugins/editor run build && yarn workspace @draft-js-plugins/utils run build && yarn workspace @draft-js-plugins/mention run build",
     "prerelease": "yarn build",
     "release": "changeset publish",
-    "postinstall": "husky install",
     "prepare": "husky install"
   },
   "workspaces": [
@@ -119,5 +117,9 @@
     "packages/utils",
     "packages/buttons",
     "packages/mention"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/dacuoi/draft-js-plugins/issues"
+  },
+  "homepage": "https://github.com/dacuoi/draft-js-plugins#readme"
 }
